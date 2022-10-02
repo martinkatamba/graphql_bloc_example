@@ -1,6 +1,6 @@
 const String getProducts = r'''
-  query getProducts{
-    products(first: 5, channel: "default-channel") {
+  query getProducts($nSize: Int!,$nChannel: String!){
+    products(first: $nSize, channel: $nChannel) {
     edges {
       node {
         id

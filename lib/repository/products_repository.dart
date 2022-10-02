@@ -21,6 +21,7 @@ class ProductsRepository {
 
     final WatchQueryOptions _options = WatchQueryOptions(
       document: parseString(queries.getProducts),
+      variables: <String, dynamic>{'nSize': 10, 'nChannel': "default-channel"},
       fetchResults: true,
     );
 
